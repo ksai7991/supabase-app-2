@@ -1,3 +1,7 @@
+domains:
+  - domain: shark-app-kki.doserverless-dev3.io
+    type: PRIMARY
+    zone: doserverless-dev3.io
 alerts:
 - rule: DEPLOYMENT_FAILED
 - rule: DOMAIN_FAILED
@@ -6,13 +10,13 @@ features:
 ingress:
   rules:
   - component:
-      name: supabase-app-3
+      name: supabase-app-2
     match:
       authority:
         exact: ""
       path:
         prefix: /
-name: supabase-app-3
+name: shark-app-kki
 region: blr
 static_sites:
 - build_command: npm install & npm run build
@@ -23,7 +27,3 @@ static_sites:
     repo: ksai7991/supabase-app-2
   name: supabase-app-2
   source_dir: /
-domains:
-  - domain: supabase-app-3.doserverless-dev3.io
-    type: PRIMARY
-    zone: doserverless-dev3.io
